@@ -1,3 +1,5 @@
+import {storedData, dataCall} from './dataCall.js';
+
 let injectHere = document.getElementById("injectHere");
 let idSort = document.getElementById("idSort");
 let firstNameSort = document.getElementById("firstNameSort");
@@ -14,18 +16,10 @@ let previousBtn = document.getElementById("previousBtn");
 let nextBtn = document.getElementById("nextBtn");
 let pageNumber = document.getElementById("pageNumber");
 
-let storedData;
 let start = 0;
 let end = 100;
 let pageCount = 100;
 let count = 1;
-
-const dataCall = async () => {
-    const promise = await fetch('./data/data.json');
-    const data = await promise.json();
-    storedData = data.People;
-    return data.People;
-}
 
 dataCall();
 
