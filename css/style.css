@@ -1,0 +1,4 @@
+.scrollClass {
+    height: 58vh;
+    overflow-y: auto;
+}
